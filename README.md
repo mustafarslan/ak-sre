@@ -77,4 +77,3 @@ To build and run the Blackbox Exporter, the required Dockerfile is located under
 
 ## Author
 - **Mustafa Arslan**
-- Email: mustafarslan35@gmail.com
