@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-api
+  labels:
+    app: java-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: java-api
+  template:
+    metadata:
+      labels:
+        app: java-api
+    spec:
+      containers:
+      - name: java-api
+        image: mustafarslan/k8s-java-sample:0.0.4
+        ports:
+        - containerPort: 8081
+        resources:
+         requests:
+           cpu: 200m
+           memory: 300Mi
+         limits:
+          cpu: 500m
+          memory: 500Mi
